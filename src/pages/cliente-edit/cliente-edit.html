@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cadastro
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="cliente.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>Sexo</ion-label>
+          <ion-select [(ngModel)]="cliente.sexo" >
+            <ion-option value="women">Feminino</ion-option>
+            <ion-option value="men">Masculino</ion-option>
+          </ion-select>
+    </ion-item>
+  </ion-list>
+  <button ion-button block (click)="salvar()" color="primary">Salvar</button>
+  <button ion-button block (click)="cancelar()" color="primary">Cancelar</button>
+</ion-content>
